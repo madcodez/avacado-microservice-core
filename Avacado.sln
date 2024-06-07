@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{081C2BF6-278F-4210-B253-6959779458E0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{80F7FF24-1B01-4EE7-8CA7-E78C3DDD3A09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{C517C9E4-B049-48DC-91C9-62EA57F8AA24}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{4289CFB6-9A19-4365-9DB5-84A03D4A0908}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avacado.Services.CouponAPI", "Avacado.Services.CouponAPI\Avacado.Services.CouponAPI.csproj", "{227C3DD4-FE1E-4DE2-8947-3B8EA74633BC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NewFolder1", "NewFolder1", "{1B47E6EC-C043-4731-92E1-B5A82DFD6C67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{227C3DD4-FE1E-4DE2-8947-3B8EA74633BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{227C3DD4-FE1E-4DE2-8947-3B8EA74633BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{227C3DD4-FE1E-4DE2-8947-3B8EA74633BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{227C3DD4-FE1E-4DE2-8947-3B8EA74633BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{227C3DD4-FE1E-4DE2-8947-3B8EA74633BC} = {80F7FF24-1B01-4EE7-8CA7-E78C3DDD3A09}
+		{1B47E6EC-C043-4731-92E1-B5A82DFD6C67} = {081C2BF6-278F-4210-B253-6959779458E0}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8F972EF-9844-4437-B827-31272D1B823B}
+	EndGlobalSection
+EndGlobal

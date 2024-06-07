@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "LYs9VS0fIzJtN1zzBNfn0HdFjXLAzHE+gk/KGzcexaQ=",
+  "Source": "Avacado.Services.CouponAPI",
+  "BasePath": "_content/Avacado.Services.CouponAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
