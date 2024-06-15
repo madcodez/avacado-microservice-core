@@ -10,7 +10,7 @@ namespace Avacado.Services.CouponAPI.Models
         public string CouponCode { get; set; }
         [Required]
         public double DiscountAmount { get; set; }
-        public int MinAomunt { get; set; }
+        public int MinAmount { get; set; }
         
     }
 }

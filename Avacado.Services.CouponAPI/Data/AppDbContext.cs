@@ -12,23 +12,25 @@ namespace Avacado.Services.CouponAPI.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+
             modelBuilder.Entity<Coupon>().HasData(new Coupon
             {
                 Id = 1,
-                CouponCode = "10FF0",
+                CouponCode = "10OFF",
                 DiscountAmount = 10,
-                MinAomunt = 20
-
+                MinAmount = 20
             });
+
 
             modelBuilder.Entity<Coupon>().HasData(new Coupon
             {
                 Id = 2,
-                CouponCode = "12CC0",
-                DiscountAmount = 15,
-                MinAomunt = 40
-
+                CouponCode = "20OFF",
+                DiscountAmount = 20,
+                MinAmount = 40
             });
         }
+
     }
 }

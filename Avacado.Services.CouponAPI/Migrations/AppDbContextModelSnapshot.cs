@@ -36,27 +36,27 @@ namespace Avacado.Services.CouponAPI.Migrations
                     b.Property<double>("DiscountAmount")
                         .HasColumnType("float");
 
-                    b.Property<int>("MinAomunt")
+                    b.Property<int>("MinAmount")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Coupons", (string)null);
+                    b.ToTable("Coupons");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            CouponCode = "10FF0",
+                            CouponCode = "10OFF",
                             DiscountAmount = 10.0,
-                            MinAomunt = 20
+                            MinAmount = 20
                         },
                         new
                         {
                             Id = 2,
-                            CouponCode = "12CC0",
-                            DiscountAmount = 15.0,
-                            MinAomunt = 40
+                            CouponCode = "20OFF",
+                            DiscountAmount = 20.0,
+                            MinAmount = 40
                         });
                 });
 #pragma warning restore 612, 618
