@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "cwnjL+BeHrM7NQzxXdpOZtU3vJ46r/9AXlwdFr7CUyk=",
+  "Source": "Avacado.Services.AuthAPI",
+  "BasePath": "_content/Avacado.Services.AuthAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
