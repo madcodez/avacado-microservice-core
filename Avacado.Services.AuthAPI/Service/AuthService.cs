@@ -48,8 +48,8 @@ namespace Avacado.Services.AuthAPI.Service
 
                 return new LoginResponseDto() { Token = "", User = null };
             }
-
-            var token = _jwtGeneratorService.GenerateToken(user);
+            var roles = await _userManager.GetRolesAsync(user);
+            var token = _jwtGeneratorService.GenerateToken(user,roles);
 
             UserDto userDto = new() 
             {

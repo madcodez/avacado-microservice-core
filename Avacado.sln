@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avacado.Services.CouponAPI"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avacado.Web", "Avacado.Web\Avacado.Web.csproj", "{9B138194-AC02-4278-BF82-EF09C7875EE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avacado.Services.AuthAPI", "Avacado.Services.AuthAPI\Avacado.Services.AuthAPI.csproj", "{483731FE-7C13-49EA-BD39-0FE71DB5B62E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avacado.Services.AuthAPI", "Avacado.Services.AuthAPI\Avacado.Services.AuthAPI.csproj", "{483731FE-7C13-49EA-BD39-0FE71DB5B62E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avacado.Services.ProductAPI", "Avacado.Services.ProductAPI\Avacado.Services.ProductAPI.csproj", "{78010D7C-2222-413E-B7B5-A15C5C58BEBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{483731FE-7C13-49EA-BD39-0FE71DB5B62E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{483731FE-7C13-49EA-BD39-0FE71DB5B62E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{483731FE-7C13-49EA-BD39-0FE71DB5B62E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78010D7C-2222-413E-B7B5-A15C5C58BEBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78010D7C-2222-413E-B7B5-A15C5C58BEBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78010D7C-2222-413E-B7B5-A15C5C58BEBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78010D7C-2222-413E-B7B5-A15C5C58BEBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

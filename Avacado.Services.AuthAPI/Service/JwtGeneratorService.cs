@@ -17,7 +17,7 @@ namespace Avacado.Services.AuthAPI.Service
             _jwtOptions = jwtOptions.Value;
         }
 
-        public string GenerateToken(ApplicationUser applicationUser)
+        public string GenerateToken(ApplicationUser applicationUser, IEnumerable<string> roles)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
 
@@ -30,6 +30,8 @@ namespace Avacado.Services.AuthAPI.Service
                 new Claim(JwtRegisteredClaimNames.Name, applicationUser.UserName),
 
             };
+
+            claims.AddRange(roles.Select(u => new Claim(ClaimTypes.Role, u)));
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {

@@ -2,6 +2,7 @@
 using Avacado.Services.CouponAPI.Data;
 using Avacado.Services.CouponAPI.Models;
 using Avacado.Services.CouponAPI.Models.Dto;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,6 +10,7 @@ namespace Avacado.Services.CouponAPI.Controllers
 {
     [Route("api/coupon")]
     [ApiController]
+    [Authorize]
     public class CouponAPIController : ControllerBase
     {
         private readonly AppDbContext _db;
@@ -78,6 +80,7 @@ namespace Avacado.Services.CouponAPI.Controllers
         }
         //Create new Coupon
         [HttpPost]
+        [Authorize(Roles = "ADMIN")]
         public object Post([FromBody] CouponDto couponDto )
         {
             try
@@ -98,6 +101,7 @@ namespace Avacado.Services.CouponAPI.Controllers
 
         }
         [HttpPut]
+        [Authorize(Roles = "ADMIN")]
         public object Put([FromBody] CouponDto couponDto)
         {
             try
@@ -119,6 +123,7 @@ namespace Avacado.Services.CouponAPI.Controllers
         }
         [HttpDelete]
         [Route("{id:int}")]
+        [Authorize(Roles = "ADMIN")]
         public object Delete(int id)
         {
             try

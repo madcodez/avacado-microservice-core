@@ -31,3 +31,8 @@ D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Web\obj\Debug\net7.0\re
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Web\obj\Debug\net7.0\Avacado.Web.pdb
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Web\obj\Debug\net7.0\Avacado.Web.genruntimeconfig.cache
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Web\obj\Debug\net7.0\ref\Avacado.Web.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Web\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Web\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Web\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Web\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Web\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
