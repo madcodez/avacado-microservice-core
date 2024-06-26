@@ -2,6 +2,7 @@ using Avacado.Web.Service.IService;
 using Avacado.Web.Service;
 using Avacado.Web.Utility;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,16 +14,19 @@ builder.Services.AddScoped<ITokenProvider, TokenProvider>();
 builder.Services.AddHttpClient<ICouponService, CouponService>();
 builder.Services.AddHttpClient<IProductService, ProductService>();
 builder.Services.AddHttpClient<IAuthService, AuthService>();
+builder.Services.AddHttpClient<ICartService, CartService>();
 
 SD.CouponApiBase = builder.Configuration["ServiceUrls:CouponAPI"];
 SD.ProductApiBase = builder.Configuration["ServiceUrls:ProductAPI"];
 SD.AuthApiBase = builder.Configuration["ServiceUrls:AuthAPI"];
+SD.CartApiBase = builder.Configuration["ServiceUrls:CartAPI"];
 
 
 builder.Services.AddScoped<IBaseService, BaseService>();
 builder.Services.AddScoped<ICouponService, CouponService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<ICartService, CartService>();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
 {
     options.ExpireTimeSpan = TimeSpan.FromHours(10);
