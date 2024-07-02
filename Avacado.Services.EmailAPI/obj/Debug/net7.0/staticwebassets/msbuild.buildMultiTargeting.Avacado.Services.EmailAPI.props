@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Avacado.Services.EmailAPI.props" />
+</Project>
