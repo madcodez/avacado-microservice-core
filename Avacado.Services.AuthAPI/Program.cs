@@ -1,6 +1,7 @@
 using Avacado.Services.AuthAPI.Data;
 using Avacado.Services.AuthAPI.Models;
 using Avacado.Services.AuthAPI.Models.Dto;
+using Avacado.Services.AuthAPI.RabbitMQSender;
 using Avacado.Services.AuthAPI.Service;
 using Avacado.Services.AuthAPI.Service.IService;
 using Microsoft.AspNetCore.Identity;
@@ -19,6 +20,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFramework
 builder.Services.AddControllers();
 builder.Services.AddScoped<IJwtGeneratorService, JwtGeneratorService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IRabbitMQAuthMessageSender, RabbitMQAuthMessageSender>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

@@ -83,3 +83,5 @@ D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.AuthAPI\obj\De
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.AuthAPI\obj\Debug\net7.0\Avacado.Services.AuthAPI.pdb
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.AuthAPI\obj\Debug\net7.0\Avacado.Services.AuthAPI.genruntimeconfig.cache
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.AuthAPI\obj\Debug\net7.0\ref\Avacado.Services.AuthAPI.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.AuthAPI\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.AuthAPI\bin\Debug\net7.0\RabbitMQ.Client.dll
