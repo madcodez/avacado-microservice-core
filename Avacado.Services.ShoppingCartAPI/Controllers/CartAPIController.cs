@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Avacado.MessageBus;
 using Avacado.Services.ShoppingCartAPI.Data;
 using Avacado.Services.ShoppingCartAPI.Models;
 using Avacado.Services.ShoppingCartAPI.Models.Dto;
@@ -19,15 +20,20 @@ namespace Avacado.Services.ShoppingCartAPI.Controllers
         private readonly ResponseDto _response;
         private readonly IProductService _productService;
         private readonly ICouponService _couponService;
+        private readonly IMessageBus _messageBus;
+        private readonly IConfiguration _configuration;
         private IMapper _mapper;
 
-        public CartAPIController(AppDbContext db, IMapper mapper,IProductService productService, ICouponService couponService)
+        public CartAPIController(AppDbContext db, IMapper mapper,IProductService productService, ICouponService couponService , IMessageBus 
+            messageBus ,IConfiguration configuration)
         {
             _db = db;
             _response = new ResponseDto();
             _mapper = mapper;
             _productService = productService;
             _couponService = couponService;
+            _messageBus = messageBus;
+            _configuration = configuration;
         }
         [HttpPost("ApplyCoupon")]
 
@@ -181,6 +187,26 @@ namespace Avacado.Services.ShoppingCartAPI.Controllers
                 _response.IsSuccess = false;
                 _response.Message = ex.Message;
                 return _response;
+            }
+            return _response;
+        }
+
+        [HttpPost("EmailCartRequest")]
+
+        public async Task<ResponseDto> EmailCartRequest([FromBody]CartDto cartDto)
+
+        {
+            try
+            {
+                await _messageBus.PublishMessage(cartDto, _configuration.GetValue<string>("TopicAndQueueNames:EmailShoppingCartQueue"));
+
+                _response.Result = true;
+            }
+            catch (Exception ex)
+            {
+                _response.IsSuccess = false;
+                _response.Message = ex.ToString();
+
             }
             return _response;
         }

@@ -3,7 +3,6 @@ D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAP
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAPI\obj\Debug\net7.0\Avacado.Services.ShoppingCartAPI.AssemblyInfoInputs.cache
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAPI\obj\Debug\net7.0\Avacado.Services.ShoppingCartAPI.AssemblyInfo.cs
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAPI\obj\Debug\net7.0\Avacado.Services.ShoppingCartAPI.csproj.CoreCompileInputs.cache
-D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAPI\obj\Debug\net7.0\Avacado.Services.ShoppingCartAPI.MvcApplicationPartsAssemblyInfo.cs
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAPI\obj\Debug\net7.0\Avacado.Services.ShoppingCartAPI.MvcApplicationPartsAssemblyInfo.cache
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAPI\bin\Debug\net7.0\appsettings.Development.json
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAPI\bin\Debug\net7.0\appsettings.json
@@ -78,3 +77,9 @@ D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAP
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAPI\obj\Debug\net7.0\Avacado.Services.ShoppingCartAPI.genruntimeconfig.cache
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAPI\obj\Debug\net7.0\ref\Avacado.Services.ShoppingCartAPI.dll
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAPI\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAPI\bin\Debug\net7.0\Azure.Core.Amqp.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAPI\bin\Debug\net7.0\Azure.Messaging.ServiceBus.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAPI\bin\Debug\net7.0\Microsoft.Azure.Amqp.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAPI\bin\Debug\net7.0\System.ClientModel.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAPI\bin\Debug\net7.0\Avacado.MessageBus.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAPI\bin\Debug\net7.0\Avacado.MessageBus.pdb

@@ -59,7 +59,16 @@ namespace Avacado.Web.Service
                 Url = SD.CartApiBase + "/api/cart/RemoveCart"
             });
         }
+        public async Task<ResponseDto?> EmailCartAsync(CartDto cartDto)
+        {
+            return await _baseService.SendAsync(new RequestDto()
+            {
+                ApiType = SD.ApiType.POST,
+                Data = cartDto,
+                Url = SD.CartApiBase + "/api/cart/EmailCartRequest"
+            });
+        }
 
-     
+
     }
 }
