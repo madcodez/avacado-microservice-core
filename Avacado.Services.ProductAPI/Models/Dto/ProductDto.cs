@@ -1,4 +1,4 @@
-﻿namespace Avacado.Services.EmailAPI.Models.Dto
+﻿namespace Avacado.Services.ProductAPI.Models.Dto
 {
     public class ProductDto
     {

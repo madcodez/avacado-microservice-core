@@ -77,3 +77,8 @@ D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.EmailAPI\obj\D
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.EmailAPI\obj\Debug\net7.0\Avacado.Services.EmailAPI.pdb
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.EmailAPI\obj\Debug\net7.0\Avacado.Services.EmailAPI.genruntimeconfig.cache
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.EmailAPI\obj\Debug\net7.0\ref\Avacado.Services.EmailAPI.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.EmailAPI\bin\Debug\net7.0\Azure.Core.Amqp.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.EmailAPI\bin\Debug\net7.0\Azure.Messaging.ServiceBus.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.EmailAPI\bin\Debug\net7.0\Microsoft.Azure.Amqp.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.EmailAPI\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.EmailAPI\bin\Debug\net7.0\System.ClientModel.dll

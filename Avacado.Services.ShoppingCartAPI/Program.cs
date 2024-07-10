@@ -8,6 +8,7 @@ using Microsoft.OpenApi.Models;
 using Avacado.Services.ShoppingCartAPI.Services.IServices;
 using Avacado.Services.ShoppingCartAPI.Services;
 using Avacado.Services.ShoppingCartAPI.Utility;
+using Avacado.MessageBus;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,6 +23,7 @@ builder.Services.AddSingleton(mapper);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<IProductService, ProductService>();
 builder.Services.AddScoped<ICouponService, CouponService>();
+builder.Services.AddScoped<IMessageBus, MessageBus>();
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<BackendAPIAuthenticator>();
 
