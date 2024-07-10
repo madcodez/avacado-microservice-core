@@ -21,11 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avacado.Services.ProductAPI
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avacado.Services.ShoppingCartAPI", "Avacado.Services.ShoppingCartAPI\Avacado.Services.ShoppingCartAPI.csproj", "{044DAC9C-8348-4454-A739-161620F8FDED}"
 EndProject
-<<<<<<< HEAD
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avacado.Services.EmailAPI", "Avacado.Services.EmailAPI\Avacado.Services.EmailAPI.csproj", "{4DCB6167-DD1D-4826-AE22-F5097A008E71}"
-=======
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avacado.MessageBus", "Avacado.MessageBus\Avacado.MessageBus.csproj", "{067FCAD4-82FA-48F0-A4AB-D6A35B88009B}"
->>>>>>> bbf9fa48a2b57c1aa52ab96bc64938072de750ee
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avacado.Services.EmailAPI", "Avacado.Services.EmailAPI\Avacado.Services.EmailAPI.csproj", "{4DCB6167-DD1D-4826-AE22-F5097A008E71}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avacado.MessageBus", "Avacado.MessageBus\Avacado.MessageBus.csproj", "{067FCAD4-82FA-48F0-A4AB-D6A35B88009B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avacado.Services.OrderAPI", "Avacado.Services.OrderAPI\Avacado.Services.OrderAPI.csproj", "{AA271C31-57FF-4250-8387-6E773E8D053C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,17 +53,18 @@ Global
 		{044DAC9C-8348-4454-A739-161620F8FDED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{044DAC9C-8348-4454-A739-161620F8FDED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{044DAC9C-8348-4454-A739-161620F8FDED}.Release|Any CPU.Build.0 = Release|Any CPU
-<<<<<<< HEAD
 		{4DCB6167-DD1D-4826-AE22-F5097A008E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4DCB6167-DD1D-4826-AE22-F5097A008E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4DCB6167-DD1D-4826-AE22-F5097A008E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4DCB6167-DD1D-4826-AE22-F5097A008E71}.Release|Any CPU.Build.0 = Release|Any CPU
-=======
 		{067FCAD4-82FA-48F0-A4AB-D6A35B88009B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{067FCAD4-82FA-48F0-A4AB-D6A35B88009B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{067FCAD4-82FA-48F0-A4AB-D6A35B88009B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{067FCAD4-82FA-48F0-A4AB-D6A35B88009B}.Release|Any CPU.Build.0 = Release|Any CPU
->>>>>>> bbf9fa48a2b57c1aa52ab96bc64938072de750ee
+		{AA271C31-57FF-4250-8387-6E773E8D053C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA271C31-57FF-4250-8387-6E773E8D053C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA271C31-57FF-4250-8387-6E773E8D053C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA271C31-57FF-4250-8387-6E773E8D053C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,11 +75,9 @@ Global
 		{483731FE-7C13-49EA-BD39-0FE71DB5B62E} = {80F7FF24-1B01-4EE7-8CA7-E78C3DDD3A09}
 		{78010D7C-2222-413E-B7B5-A15C5C58BEBD} = {80F7FF24-1B01-4EE7-8CA7-E78C3DDD3A09}
 		{044DAC9C-8348-4454-A739-161620F8FDED} = {80F7FF24-1B01-4EE7-8CA7-E78C3DDD3A09}
-<<<<<<< HEAD
 		{4DCB6167-DD1D-4826-AE22-F5097A008E71} = {80F7FF24-1B01-4EE7-8CA7-E78C3DDD3A09}
-=======
 		{067FCAD4-82FA-48F0-A4AB-D6A35B88009B} = {4289CFB6-9A19-4365-9DB5-84A03D4A0908}
->>>>>>> bbf9fa48a2b57c1aa52ab96bc64938072de750ee
+		{AA271C31-57FF-4250-8387-6E773E8D053C} = {80F7FF24-1B01-4EE7-8CA7-E78C3DDD3A09}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C8F972EF-9844-4437-B827-31272D1B823B}

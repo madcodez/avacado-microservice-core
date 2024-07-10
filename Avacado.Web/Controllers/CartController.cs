@@ -4,22 +4,49 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.IdentityModel.Tokens.Jwt;
+using System.Text.RegularExpressions;
 
 namespace Avacado.Web.Controllers
 {
     public class CartController : Controller
     {
         private readonly ICartService _cartService;
+        private readonly IOrderService _orderService;
 
-        public CartController(ICartService cartService)
+        public CartController(ICartService cartService, IOrderService orderService)
         {
             _cartService = cartService;
+            _orderService = orderService;
         }
         [Authorize]
         public async Task<IActionResult> CartIndex()
         {
             return View(await LoadCartDefaultBasedOnUser());
         }
+        [Authorize]
+        public async Task<IActionResult> Checkout()
+        {
+            return View(await LoadCartDefaultBasedOnUser());
+        }
+        [HttpPost]
+        [ActionName("Checkout")]
+        public async Task<IActionResult> Checkout(CartDto cartDto)
+        {
+            CartDto cart = await LoadCartDefaultBasedOnUser();
+            cart.CartHeader.Name = cartDto.CartHeader.Name;
+            cart.CartHeader.Phone = cartDto.CartHeader.Phone;
+            cart.CartHeader.Email = cartDto.CartHeader.Email;
+
+            ResponseDto? response  = await _orderService.CreateOrderAsync(cart);
+            OrderHeaderDto orderHeaderDto = JsonConvert.DeserializeObject<OrderHeaderDto>(Convert.ToString(response.Result));
+
+            if(response.Result != null && response.IsSuccess) 
+            {
+              //get stripe instancs
+            }
+            return View();
+        }
+
 
         public async Task<CartDto> LoadCartDefaultBasedOnUser()
         {

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "hK4FdQVesPkplFRa+NRYUhV04vsV1ZwdyWuNBISpc38=",
+  "Source": "Avacado.Services.OrderAPI",
+  "BasePath": "_content/Avacado.Services.OrderAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
