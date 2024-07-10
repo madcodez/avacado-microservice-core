@@ -11,7 +11,7 @@ namespace Avacado.MessageBus
     public class MessageBus : IMessageBus
     {   
         //Add ur Serice Bus end point
-        private string connectionString = "";
+        private string connectionString = "Endpoint=sb://avacadoweb.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=CwkoUMlKbBdq5+h1yerlPIYo/BVD1DI8T+ASbNuW3WY=";
         public async Task PublishMessage(object message, string queue_name)
         {
             await using var client = new ServiceBusClient(connectionString);

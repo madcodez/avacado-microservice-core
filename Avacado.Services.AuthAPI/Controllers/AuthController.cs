@@ -1,4 +1,5 @@
-﻿using Avacado.Services.AuthAPI.Models.Dto;
+﻿using Avacado.MessageBus;
+using Avacado.Services.AuthAPI.Models.Dto;
 using Avacado.Services.AuthAPI.Service.IService;
 using Avacado.Services.CouponAPI.Models.Dto;
 using Microsoft.AspNetCore.Mvc;
@@ -11,11 +12,15 @@ namespace Avacado.Services.AuthAPI.Controllers
     {
         private IAuthService _authService;
         private ResponseDto _responseDto;
+        private IMessageBus _messageBus;
+        private IConfiguration _configuration; 
 
-        public AuthController(IAuthService authService)
+        public AuthController(IAuthService authService,IMessageBus messageBus, IConfiguration configuration)
         {
             _authService = authService;
             _responseDto = new();
+            _messageBus = messageBus; 
+            _configuration = configuration; 
         }
 
         [HttpPost("register")]
@@ -29,6 +34,7 @@ namespace Avacado.Services.AuthAPI.Controllers
                 _responseDto.Message = errorMessage;
                 return BadRequest(_responseDto);
             }
+            await _messageBus.PublishMessage(registerRequestDto.Email, _configuration.GetValue<string>("TopicAndQueueNames:RegisterUserQueue"));
             return Ok(_responseDto);
         }
         [HttpPost("login")]

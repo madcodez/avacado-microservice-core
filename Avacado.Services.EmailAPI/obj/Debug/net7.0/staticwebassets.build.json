@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "F6IsqQXzo39Ob3ruGF31HDHt6W60FRxCWQQzYVIDrL4=",
+  "Source": "Avacado.Services.EmailAPI",
+  "BasePath": "_content/Avacado.Services.EmailAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

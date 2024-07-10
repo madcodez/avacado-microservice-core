@@ -83,3 +83,4 @@ D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAP
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAPI\bin\Debug\net7.0\System.ClientModel.dll
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAPI\bin\Debug\net7.0\Avacado.MessageBus.dll
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAPI\bin\Debug\net7.0\Avacado.MessageBus.pdb
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ShoppingCartAPI\obj\Debug\net7.0\Avacado.Services.ShoppingCartAPI.MvcApplicationPartsAssemblyInfo.cs
