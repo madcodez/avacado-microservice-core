@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "41Qsp1/ePKmMSmHHd7qzlZtCZu14RLtBU6eVOWa5nqvseSNmxNWimYaK+ZLldoedn5/7wQrWMKK3bExKKczrtQ==",
+  "dgSpecHash": "XMejHnM/dOjmMIfuZqXGj5cdaGyVAjn6SBRbTXMY1VOxwvDXEImNkg3LtUxow0/iGApznaTolDVxvWK4USbXLg==",
   "success": true,
   "projectFilePath": "D:\\Personal projects\\avacado_micro_azure\\Avacado\\Avacado.Services.CouponAPI\\Avacado.Services.CouponAPI.csproj",
   "expectedPackageFiles": [
@@ -47,6 +47,8 @@
     "C:\\Users\\user\\.nuget\\packages\\microsoft.sqlserver.server\\1.0.0\\microsoft.sqlserver.server.1.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\stripe.net\\45.3.0\\stripe.net.45.3.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",

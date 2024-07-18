@@ -84,3 +84,4 @@ D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.OrderAPI\obj\D
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.OrderAPI\obj\Debug\net7.0\Avacado.Services.OrderAPI.pdb
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.OrderAPI\obj\Debug\net7.0\Avacado.Services.OrderAPI.genruntimeconfig.cache
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.OrderAPI\obj\Debug\net7.0\ref\Avacado.Services.OrderAPI.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.OrderAPI\bin\Debug\net7.0\Stripe.net.dll

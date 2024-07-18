@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\Personal projects\\avacado_micro_azure\\Avacado\\Avacado.Web\\wwwroot\\images\\order.PNG",
+      "PackagePath": "staticwebassets\\images\\order.PNG"
+    },
+    {
       "Id": "D:\\Personal projects\\avacado_micro_azure\\Avacado\\Avacado.Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

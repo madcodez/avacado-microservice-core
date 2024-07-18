@@ -89,6 +89,18 @@ namespace Avacado.Services.CouponAPI.Controllers
                 _db.Coupons.Add(obj);
                 _db.SaveChanges();
 
+               
+
+                var options = new Stripe.CouponCreateOptions
+                {
+                    AmountOff = (long)(couponDto.DiscountAmount*100),
+                    Name=couponDto.CouponCode,
+                    Currency = "inr",
+                    Id=couponDto.CouponCode,
+                };
+                var service = new Stripe.CouponService();
+                service.Create(options);
+
                 _response.Result = _mapper.Map<CouponDto>(obj);
 
             }
@@ -131,6 +143,10 @@ namespace Avacado.Services.CouponAPI.Controllers
                 Coupon coupon = _db.Coupons.First(i => i.Id == id);
                 _db.Coupons.Remove(coupon);
                 _db.SaveChanges();
+
+               
+                var service = new Stripe.CouponService();
+                service.Delete(coupon.CouponCode);
 
                 _response.Result = _mapper.Map<CouponDto>(coupon);
 

@@ -77,3 +77,5 @@ D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.CouponAPI\obj\
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.CouponAPI\obj\Debug\net7.0\Avacado.Services.CouponAPI.pdb
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.CouponAPI\obj\Debug\net7.0\Avacado.Services.CouponAPI.genruntimeconfig.cache
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.CouponAPI\obj\Debug\net7.0\ref\Avacado.Services.CouponAPI.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.CouponAPI\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.CouponAPI\bin\Debug\net7.0\Stripe.net.dll

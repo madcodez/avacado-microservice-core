@@ -10,6 +10,7 @@ using Avacado.Services.OrderAPI.Services.IServices;
 using Avacado.Services.OrderAPI.Services;
 using Avacado.MessageBus;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -70,7 +71,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+Stripe.StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe:SecretKey").Get<string>();
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
