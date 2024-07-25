@@ -1,4 +1,5 @@
 ﻿using Avacado.Services.EmailAPI.Data;
+using Avacado.Services.EmailAPI.Message;
 using Avacado.Services.EmailAPI.Models;
 using Avacado.Services.EmailAPI.Models.Dto;
 using Microsoft.AspNetCore.SignalR;
@@ -33,6 +34,12 @@ namespace Avacado.Services.EmailAPI.Services
             message.Append("</ul>");
 
             await LogAndEmail(message.ToString(), cartDto.CartHeader.Email);
+        }
+
+        public async Task EmailOrderCreated(RewardsMessage message)
+        {
+            string logmessage = "New Order Placed. <br/> Order ID : " + message.OrderId;
+            await LogAndEmail(logmessage, "avacado.string@gmail.com");
         }
 
         public async Task EmailUserRegisterLog(string email)

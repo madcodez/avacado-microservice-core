@@ -1,4 +1,5 @@
-﻿using Avacado.Services.EmailAPI.Models.Dto;
+﻿using Avacado.Services.EmailAPI.Message;
+using Avacado.Services.EmailAPI.Models.Dto;
 using Avacado.Services.EmailAPI.Services;
 using Azure.Messaging.ServiceBus;
 using Newtonsoft.Json;
@@ -11,9 +12,12 @@ namespace Avacado.Services.EmailAPI.Messaging
         private readonly string serviceBusConnectionString;
         private readonly string emailCartQueue;
         private readonly string emailUserRegisterQueue;
+        private readonly string orderCreatedTopic;
+        private readonly string orderCreatedSubscription;
         private readonly IConfiguration _configuartion;
         private ServiceBusProcessor _cartProcessor;
         private ServiceBusProcessor _regProcessor;
+        private ServiceBusProcessor _orderProcessor;
         private readonly EmailService _emailService; 
         public AzureServiceBusConsumer(IConfiguration configuartion,EmailService emailService) 
         {
@@ -25,10 +29,15 @@ namespace Avacado.Services.EmailAPI.Messaging
 
             emailUserRegisterQueue = _configuartion.GetValue<string>("TopicAndQueueNames:RegisterUserQueue");
 
+            orderCreatedTopic = _configuartion.GetValue<string>("TopicAndQueueNames:OrderCreatedTopic");
+
+            orderCreatedSubscription = _configuartion.GetValue<string>("TopicAndQueueNames:OrderCreatedEmailSubscription");
+
             var client = new ServiceBusClient(serviceBusConnectionString);
 
             _cartProcessor = client.CreateProcessor(emailCartQueue);
             _regProcessor = client.CreateProcessor(emailUserRegisterQueue);
+            _orderProcessor = client.CreateProcessor(orderCreatedTopic, orderCreatedSubscription);
 
             _emailService = emailService;
 
@@ -44,6 +53,30 @@ namespace Avacado.Services.EmailAPI.Messaging
             _regProcessor.ProcessMessageAsync += OnUserRegisterReqRec;
             _regProcessor.ProcessErrorAsync += ErrorHandler;
             await _regProcessor.StartProcessingAsync();
+
+            _orderProcessor.ProcessMessageAsync += OnOrderPlacedRequestReceived;
+            _orderProcessor.ProcessErrorAsync += ErrorHandler;
+            await _orderProcessor.StartProcessingAsync();
+
+        }
+
+        private async Task OnOrderPlacedRequestReceived(ProcessMessageEventArgs args)
+        {
+            //this is where you will receive message
+            var message = args.Message;
+            var body = Encoding.UTF8.GetString(message.Body);
+
+            RewardsMessage objMessage = JsonConvert.DeserializeObject<RewardsMessage>(body);
+            try
+            {
+                //TODO - try to log email
+                await _emailService.EmailOrderCreated(objMessage);
+                await args.CompleteMessageAsync(args.Message);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
 
         }
 
@@ -96,6 +129,9 @@ namespace Avacado.Services.EmailAPI.Messaging
 
             await _regProcessor.StopProcessingAsync();
             await _regProcessor.DisposeAsync();
+
+            await _orderProcessor.StopProcessingAsync();
+            await _orderProcessor.DisposeAsync();
         }
     }
 }

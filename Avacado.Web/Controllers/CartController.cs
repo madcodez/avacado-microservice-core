@@ -3,6 +3,7 @@ using Avacado.Web.Service.IService;
 using Avacado.Web.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
 using System.IdentityModel.Tokens.Jwt;
 using System.Text.RegularExpressions;
@@ -13,11 +14,13 @@ namespace Avacado.Web.Controllers
     {
         private readonly ICartService _cartService;
         private readonly IOrderService _orderService;
+        private readonly ICouponService _couponService;
 
-        public CartController(ICartService cartService, IOrderService orderService)
+        public CartController(ICartService cartService, IOrderService orderService,ICouponService couponService)
         {
             _cartService = cartService;
             _orderService = orderService;
+            _couponService = couponService;   
         }
         [Authorize]
         public async Task<IActionResult> CartIndex()
@@ -34,6 +37,9 @@ namespace Avacado.Web.Controllers
         public async Task<IActionResult> Checkout(CartDto cartDto)
         {
             CartDto cart = await LoadCartDefaultBasedOnUser();
+
+
+
             cart.CartHeader.Name = cartDto.CartHeader.Name;
             cart.CartHeader.Phone = cartDto.CartHeader.Phone;
             cart.CartHeader.Email = cartDto.CartHeader.Email;
@@ -62,7 +68,7 @@ namespace Avacado.Web.Controllers
         }
         public async Task<IActionResult> Confirmation(int orderId)
         {
-            ResponseDto? response = await _orderService.ValidateStripeSession(orderId);
+            ResponseDto? response = await _orderService.ValidateStripeSession(orderId); 
             if (response != null & response.IsSuccess)
             {
 
@@ -99,18 +105,41 @@ namespace Avacado.Web.Controllers
                 TempData["success"] = "Cart updated successfully";
                 return RedirectToAction(nameof(CartIndex));
             }
+            else
+            {
+                TempData["error"] = "Not Active Coupon";
+                
+            }
             return View();
         }
         [HttpPost]
         public async Task<IActionResult> ApplyCoupon(CartDto cartDto)
         {
+            CartDto cart = await LoadCartDefaultBasedOnUser();
+
+            var couponCode = cartDto.CartHeader.CouponCode;
+
+            ResponseDto responseCode = await _couponService.GetCouponAsync(couponCode);
+            CouponDto couponDto = JsonConvert.DeserializeObject<CouponDto>(Convert.ToString(responseCode.Result));
             
-            ResponseDto? response = await _cartService.ApplyCouponAsync(cartDto);
-            if (response != null & response.IsSuccess)
+            if (string.IsNullOrEmpty(couponDto?.CouponCode) || couponDto?.MinAmount > cart.CartHeader.CartTotal) 
             {
-                TempData["success"] = "Cart updated successfully";
+                TempData["error"] = "Enter a valid coupon code";
                 return RedirectToAction(nameof(CartIndex));
+
             }
+            else 
+            {
+                ResponseDto? response = await _cartService.ApplyCouponAsync(cartDto);
+                if (response != null & response.IsSuccess)
+                {
+                    TempData["success"] = "Cart updated successfully";
+                    return RedirectToAction(nameof(CartIndex));
+                }
+
+            }
+
+          
             return View();
         }
         [HttpPost]

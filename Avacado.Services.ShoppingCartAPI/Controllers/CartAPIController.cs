@@ -45,12 +45,15 @@ namespace Avacado.Services.ShoppingCartAPI.Controllers
                 var cartFromDb = _db.CartHeaders.First(x => x.UserId == cartDto.CartHeader.UserId);
 
                 cartFromDb.CouponCode = cartDto.CartHeader.CouponCode;
-
+               
                 _db.CartHeaders.Update(cartFromDb);
 
                 await _db.SaveChangesAsync();
 
                 _response.Result = true;
+                
+
+            
             }
             catch(Exception ex) 
             {

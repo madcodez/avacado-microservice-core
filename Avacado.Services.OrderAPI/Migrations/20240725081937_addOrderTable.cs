@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Avacado.Services.OrderAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class AddOrderTable : Migration
+    public partial class addOrderTable : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -20,7 +20,7 @@ namespace Avacado.Services.OrderAPI.Migrations
                     UserId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     CouponCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Discount = table.Column<double>(type: "float", nullable: false),
-                    CartTotal = table.Column<double>(type: "float", nullable: false),
+                    OrderTotal = table.Column<double>(type: "float", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: true),

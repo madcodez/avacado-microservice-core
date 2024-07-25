@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Avacado.Services.OrderAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240710073430_AddOrderTable")]
-    partial class AddOrderTable
+    [Migration("20240725081937_addOrderTable")]
+    partial class addOrderTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -64,9 +64,6 @@ namespace Avacado.Services.OrderAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderHeaderId"));
 
-                    b.Property<double>("CartTotal")
-                        .HasColumnType("float");
-
                     b.Property<string>("CouponCode")
                         .HasColumnType("nvarchar(max)");
 
@@ -81,6 +78,9 @@ namespace Avacado.Services.OrderAPI.Migrations
 
                     b.Property<DateTime?>("OrderTime")
                         .HasColumnType("datetime2");
+
+                    b.Property<double>("OrderTotal")
+                        .HasColumnType("float");
 
                     b.Property<string>("PaymentIntentId")
                         .HasColumnType("nvarchar(max)");

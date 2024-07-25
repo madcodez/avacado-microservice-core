@@ -1,4 +1,5 @@
-﻿using Avacado.Services.EmailAPI.Models.Dto;
+﻿using Avacado.Services.EmailAPI.Message;
+using Avacado.Services.EmailAPI.Models.Dto;
 
 namespace Avacado.Services.EmailAPI.Services
 {
@@ -6,6 +7,7 @@ namespace Avacado.Services.EmailAPI.Services
     {
         Task EmailCartLog(CartDto cartDto);
         Task EmailUserRegisterLog(string email);
+        Task EmailOrderCreated(RewardsMessage message);
     }
 }
 

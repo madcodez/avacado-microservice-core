@@ -61,9 +61,6 @@ namespace Avacado.Services.OrderAPI.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderHeaderId"));
 
-                    b.Property<double>("CartTotal")
-                        .HasColumnType("float");
-
                     b.Property<string>("CouponCode")
                         .HasColumnType("nvarchar(max)");
 
@@ -78,6 +75,9 @@ namespace Avacado.Services.OrderAPI.Migrations
 
                     b.Property<DateTime?>("OrderTime")
                         .HasColumnType("datetime2");
+
+                    b.Property<double>("OrderTotal")
+                        .HasColumnType("float");
 
                     b.Property<string>("PaymentIntentId")
                         .HasColumnType("nvarchar(max)");
