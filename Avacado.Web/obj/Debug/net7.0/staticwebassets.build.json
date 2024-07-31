@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2mKP+iWSm2rJTICx4AWlgDi5JNGOMoq+wfasqsgBkm8=",
+  "Hash": "Wwezw/VEYaq9dTkXtjPSxF8czpcbsokz0U2sy2JCAWg=",
   "Source": "Avacado.Web",
   "BasePath": "_content/Avacado.Web",
   "Mode": "Default",
@@ -100,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\order.PNG"
+    },
+    {
+      "Identity": "D:\\Personal projects\\avacado_micro_azure\\Avacado\\Avacado.Web\\wwwroot\\js\\order.js",
+      "SourceId": "Avacado.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Personal projects\\avacado_micro_azure\\Avacado\\Avacado.Web\\wwwroot\\",
+      "BasePath": "_content/Avacado.Web",
+      "RelativePath": "js/order.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\order.js"
     },
     {
       "Identity": "D:\\Personal projects\\avacado_micro_azure\\Avacado\\Avacado.Web\\wwwroot\\js\\site.js",

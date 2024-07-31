@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\images\\order.PNG"
     },
     {
+      "Id": "D:\\Personal projects\\avacado_micro_azure\\Avacado\\Avacado.Web\\wwwroot\\js\\order.js",
+      "PackagePath": "staticwebassets\\js\\order.js"
+    },
+    {
       "Id": "D:\\Personal projects\\avacado_micro_azure\\Avacado\\Avacado.Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

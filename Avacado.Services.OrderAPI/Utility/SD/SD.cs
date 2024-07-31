@@ -2,11 +2,14 @@
 {
     public class SD
     {
-        public const string Status_Pending  = "Pending";
-        public const string Status_Approved = "Approved";
-        public const string Status_ReadyForPickup = "ReadyForPickup";
-        public const string Status_Completed = "Completed";
-        public const string Status_Refunded = "Refunded";
-        public const string Status_Cancelled = "Cancelled";
+        public const string Status_Pending  = "pending";
+        public const string Status_Approved = "approved";
+        public const string Status_ReadyForPickup = "readyforpickup";
+        public const string Status_Completed = "completed";
+        public const string Status_Refunded = "refunded";
+        public const string Status_Cancelled = "cancelled";
+
+        public const string RoleAdmin = "ADMIN";
+        public const string RoleCustomer = "CUSTOMER";
     }
 }
