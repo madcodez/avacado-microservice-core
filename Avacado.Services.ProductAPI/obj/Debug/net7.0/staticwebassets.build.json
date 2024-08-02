@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "vArL/Ej0cJMlF/fx6jw7ztvfDYixPnb8Khe+vDFLFcw=",
+  "Hash": "MUswtvjUUiHMMUHG2VOH9sLHiLFIl1JN4Klwy1lBkbE=",
   "Source": "Avacado.Services.ProductAPI",
   "BasePath": "_content/Avacado.Services.ProductAPI",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "Avacado.Services.ProductAPI\\wwwroot",
+      "Source": "Avacado.Services.ProductAPI",
+      "ContentRoot": "D:\\Personal projects\\avacado_micro_azure\\Avacado\\Avacado.Services.ProductAPI\\wwwroot\\",
+      "BasePath": "_content/Avacado.Services.ProductAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\Personal projects\\avacado_micro_azure\\Avacado\\Avacado.Services.ProductAPI\\wwwroot\\ProductImages\\9.jpg",
+      "SourceId": "Avacado.Services.ProductAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Personal projects\\avacado_micro_azure\\Avacado\\Avacado.Services.ProductAPI\\wwwroot\\",
+      "BasePath": "_content/Avacado.Services.ProductAPI",
+      "RelativePath": "ProductImages/9.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ProductImages\\9.jpg"
+    }
+  ]
 }

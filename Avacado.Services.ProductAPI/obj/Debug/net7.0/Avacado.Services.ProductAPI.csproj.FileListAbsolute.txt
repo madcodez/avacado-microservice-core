@@ -77,3 +77,4 @@ D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ProductAPI\obj
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ProductAPI\obj\Debug\net7.0\Avacado.Services.ProductAPI.pdb
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ProductAPI\obj\Debug\net7.0\Avacado.Services.ProductAPI.genruntimeconfig.cache
 D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ProductAPI\obj\Debug\net7.0\ref\Avacado.Services.ProductAPI.dll
+D:\Personal projects\avacado_micro_azure\Avacado\Avacado.Services.ProductAPI\bin\Debug\net7.0\Avacado.Services.ProductAPI.staticwebassets.runtime.json
